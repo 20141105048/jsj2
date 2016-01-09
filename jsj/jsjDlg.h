@@ -35,6 +35,7 @@ public:
 	afx_msg void OnClicked1();
 	int flag;
 	double temp;
+	int c,c1,c3,c4;
 	afx_msg void OnBnClicked2();
 	afx_msg void OnBnClicked3();
 	afx_msg void OnBnClicked0();
@@ -60,4 +61,5 @@ public:
 	afx_msg void OnClickedChu();
 	afx_msg void OnBnClickedback();
 	
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
 };
