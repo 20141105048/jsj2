@@ -485,8 +485,11 @@ void CjsjDlg::OnBnClickedsj()
 	}
 	CPen newpen(PS_SOLID,1,RGB(225,0,0));
 	oldpen1=dc.SelectObject(&newpen);
+
 	dc.MoveTo(0,0);
 	dc.LineTo(0,-40);
+	
+	
 	
     }
 
@@ -494,13 +497,13 @@ void CjsjDlg::OnBnClickedsj()
 	void CjsjDlg::OnTimer(UINT_PTR nIDEvent)
 {
 	// TODO: 在此添加消息处理程序代码和/或调用默认值
-	/*CDC *pDC5;
+	CDC *pDC5;
 	CPen newpen,*oldpen;
 	newpen.CreatePen(PS_SOLID,1,RGB(255,0,0));
 	pDC5=GetDC();
 	oldpen=pDC5->SelectObject(&newpen);
 	pDC5->MoveTo(380,240);
-	pDC5->LineTo(380,200);*/
+	pDC5->LineTo(380,200);
 	
 	if(nIDEvent==1)
 	{
@@ -533,7 +536,7 @@ void CjsjDlg::OnBnClickedsj()
 		int r=60,x3,x4,y3,y4,ox=380,oy=240;
 	CDC *pDC3;
 	CPen newpen,*oldpen;
-	newpen.CreatePen(PS_SOLID,2,RGB(255,255,255));
+	newpen.CreatePen(PS_SOLID,3,RGB(255,255,255));
 	pDC3=GetDC();
 	oldpen=pDC3->SelectObject(&newpen);
     x3=ox+r*sin(c3*3.1415926/180);
@@ -543,7 +546,7 @@ void CjsjDlg::OnBnClickedsj()
 	c3=c3-6;
 	CDC *pDC4;
 	CPen newpen1,*oldpen1;
-	newpen1.CreatePen(PS_SOLID,2,RGB(0,255,0));
+	newpen1.CreatePen(PS_SOLID,3,RGB(0,100,255));
 	pDC4=GetDC();
 	oldpen1=pDC4->SelectObject(&newpen1);
     x4=ox+r*sin(c4*3.1415926/180);

@@ -1,7 +1,7 @@
-﻿生成启动时间为 2016/1/10 16:01:01。
+﻿生成启动时间为 2016/1/10 16:25:25。
      1>项目“C:\Users\linshuai\Desktop\jsj2\jsj\jsj.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
-         正在对“Debug\jsj.unsuccessfulbuild”执行 Touch 任务。
+         正在创建“Debug\jsj.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
          所有输出均为最新。
          D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\jsj.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt jsjDlg.cpp
@@ -10,18 +10,18 @@
      1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(479): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
      1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(479): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
      1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(479): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(513): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(514): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(523): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(524): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(539): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(540): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(549): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(550): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(567): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(568): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(577): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(578): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(516): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(517): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(526): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(527): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(542): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(543): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(552): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(553): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(570): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(571): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(580): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\users\linshuai\desktop\jsj2\jsj\jsjdlg.cpp(581): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
        ResourceCompile:
          所有输出均为最新。
        ManifestResourceCompile:
@@ -45,4 +45,4 @@
 
 生成成功。
 
-已用时间 00:00:00.83
+已用时间 00:00:00.98
