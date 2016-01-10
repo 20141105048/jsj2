@@ -60,6 +60,7 @@ public:
 	afx_msg void OnClickedJian();
 	afx_msg void OnClickedChu();
 	afx_msg void OnBnClickedback();
-	
+	afx_msg void Get();
 	afx_msg void OnTimer(UINT_PTR nIDEvent);
+	afx_msg void OnBnClickedsj();
 };
