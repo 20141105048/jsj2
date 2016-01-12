@@ -126,7 +126,7 @@ BOOL CjsjDlg::OnInitDialog()
 	//  执行此操作
 	SetIcon(m_hIcon, TRUE);			// 设置大图标
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
-	SetTimer(1,1000,NULL);
+	//SetTimer(1,1000,NULL);
 	// TODO: 在此添加额外的初始化代码
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
@@ -459,7 +459,8 @@ void CjsjDlg::OnBnClickedback()
 
 void CjsjDlg::OnBnClickedsj()
 	{
-		
+
+		SetTimer(1,1000,NULL);
 		
 	CDC *pDC9;
 	pDC9=GetDC();
