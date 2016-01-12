@@ -54,7 +54,7 @@ CjsjDlg::CjsjDlg(CWnd* pParent /*=NULL*/)
 	, m_str(_T(""))
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
-	c=171;c1=165;c3=180;c4=174;
+	c=174;c1=168;c3=360;c4=354;c5=180;c6=174;
 }
 
 void CjsjDlg::DoDataExchange(CDataExchange* pDX)
@@ -127,8 +127,6 @@ BOOL CjsjDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);			// 设置大图标
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 	SetTimer(1,1000,NULL);
-	SetTimer(2,60000,NULL);
-	SetTimer(3,3600000,NULL);
 	// TODO: 在此添加额外的初始化代码
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
@@ -463,31 +461,25 @@ void CjsjDlg::OnBnClickedsj()
 	{
 		
 		
-	CClientDC dc(this);
-	dc.SetWindowOrg(0-380,0-240);
+	CDC *pDC9;
+	pDC9=GetDC();
+	pDC9->SetWindowOrg(0-380,0-240);
 	CPen *oldpen1;
 	CPen pen(PS_SOLID,3,RGB(0,100,255));
-	oldpen1=dc.SelectObject(&pen);
+	oldpen1=pDC9->SelectObject(&pen);
 
-	dc.Ellipse(100,-100,-100,100);
-	dc.Ellipse(-1,1,1,-1);
+	pDC9->Ellipse(100,-100,-100,100);
+	pDC9->Ellipse(-1,1,1,-1);
 	
 	for(int i=0;i<12;i++)
 	{
 		double l=90,ag=i*3.1415926/6;
 		double a=l*sin(ag)+1,b=-l*cos(ag)+1,c=l*sin(ag)-1,d=-l*cos(ag)-1;
-		dc.Ellipse(a,b,c,d);
-		dc.MoveTo(0,0);
-	    dc.LineTo(0,-60);
-
+		pDC9->Ellipse(a,b,c,d);
+		
 		
 
 	}
-	CPen newpen(PS_SOLID,1,RGB(225,0,0));
-	oldpen1=dc.SelectObject(&newpen);
-
-	dc.MoveTo(0,0);
-	dc.LineTo(0,-40);
 	
 	
 	
@@ -497,13 +489,7 @@ void CjsjDlg::OnBnClickedsj()
 	void CjsjDlg::OnTimer(UINT_PTR nIDEvent)
 {
 	// TODO: 在此添加消息处理程序代码和/或调用默认值
-	CDC *pDC5;
-	CPen newpen,*oldpen;
-	newpen.CreatePen(PS_SOLID,1,RGB(255,0,0));
-	pDC5=GetDC();
-	oldpen=pDC5->SelectObject(&newpen);
-	pDC5->MoveTo(380,240);
-	pDC5->LineTo(380,200);
+	
 	
 	if(nIDEvent==1)
 	{
@@ -531,62 +517,63 @@ void CjsjDlg::OnBnClickedsj()
 	
 	}
 	
-	if(nIDEvent==2)
-	{
+	
+
 		int r=60,x3,x4,y3,y4,ox=380,oy=240;
 	CDC *pDC3;
-	CPen newpen,*oldpen;
-	newpen.CreatePen(PS_SOLID,3,RGB(255,255,255));
+	CPen newpen2,*oldpen2;
+	newpen2.CreatePen(PS_SOLID,2,RGB(255,255,255));
 	pDC3=GetDC();
-	oldpen=pDC3->SelectObject(&newpen);
-    x3=ox+r*sin(c3*3.1415926/180);
-	y3=oy+r*cos(c3*3.1415926/180);
+	oldpen2=pDC3->SelectObject(&newpen2);
+    x3=ox+r*sin(c3*3.1415926/360);
+	y3=oy+r*cos(c3*3.1415926/360);
 	pDC3->MoveTo(ox,oy);
 	pDC3->LineTo(x3,y3);
-	c3=c3-6;
+	c3=c3-0.1;
 	CDC *pDC4;
-	CPen newpen1,*oldpen1;
-	newpen1.CreatePen(PS_SOLID,3,RGB(0,100,255));
+	CPen newpen3,*oldpen3;
+	newpen3.CreatePen(PS_SOLID,2,RGB(0,100,255));
 	pDC4=GetDC();
-	oldpen1=pDC4->SelectObject(&newpen1);
-    x4=ox+r*sin(c4*3.1415926/180);
-	y4=oy+r*cos(c4*3.1415926/180);
+	oldpen3=pDC4->SelectObject(&newpen3);
+    x4=ox+r*sin(c4*3.1415926/360);
+	y4=oy+r*cos(c4*3.1415926/360);
 	pDC4->MoveTo(ox,oy);
 	pDC4->LineTo(x4,y4);
-	c4=c4-6;
+	c4=c4-0.1;
 
 	
 	
 	
-	}
-	if(nIDEvent==3)
-	{
-		int r=60,x3,x4,y3,y4,ox=380,oy=240;
-	CDC *pDC3;
-	CPen newpen,*oldpen;
-	newpen.CreatePen(PS_SOLID,1,RGB(255,0,0));
-	pDC3=GetDC();
-	oldpen=pDC3->SelectObject(&newpen);
-    x3=ox+r*sin(c3*3.1415926/180);
-	y3=oy+r*cos(c3*3.1415926/180);
-	pDC3->MoveTo(ox,oy);
-	pDC3->LineTo(x3,y3);
-	c3=c3-6;
-	CDC *pDC4;
-	CPen newpen1,*oldpen1;
-	newpen1.CreatePen(PS_SOLID,2,RGB(0,255,0));
-	pDC4=GetDC();
-	oldpen1=pDC4->SelectObject(&newpen1);
-    x4=ox+r*sin(c4*3.1415926/180);
-	y4=oy+r*cos(c4*3.1415926/180);
-	pDC4->MoveTo(ox,oy);
-	pDC4->LineTo(x4,y4);
-	c4=c4-6;
+
+	
+	
+		int k=40,x5,x6,y5,y6;
+	CDC *pDC7;
+	CPen newpen5,*oldpen5;
+	newpen5.CreatePen(PS_SOLID,2,RGB(255,255,255));
+	pDC7=GetDC();
+	oldpen5=pDC7->SelectObject(&newpen5);
+    x5=ox+k*sin(c3*3.1415926/36000);
+	y5=oy+k*cos(c3*3.1415926/36000);
+	pDC7->MoveTo(ox,oy);
+	pDC7->LineTo(x5,y5);
+	c5=c5-0.1;
+	CDC *pDC8;
+	CPen newpen6,*oldpen6;
+	newpen6.CreatePen(PS_SOLID,2,RGB(255,0,255));
+	pDC8=GetDC();
+	oldpen6=pDC8->SelectObject(&newpen6);
+    x6=ox+k*sin(c4*3.1415926/36000);
+	y6=oy+k*cos(c4*3.1415926/36000);
+	pDC8->MoveTo(ox,oy);
+	pDC8->LineTo(x6,y6);
+	c6=c6-0.1;
 
 	
 	
 	
-	}
+	
+	
 
 
 	CDialogEx::OnTimer(nIDEvent);

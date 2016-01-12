@@ -35,7 +35,7 @@ public:
 	afx_msg void OnClicked1();
 	int flag;
 	double temp;
-	int c,c1,c3,c4;
+	int c,c1,c3,c4,c5,c6;
 	afx_msg void OnBnClicked2();
 	afx_msg void OnBnClicked3();
 	afx_msg void OnBnClicked0();
