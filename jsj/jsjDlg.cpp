@@ -270,7 +270,7 @@ void CjsjDlg::OnBnClickedjs()
 		if(a<=0.00000000000000000000000001)
 		{
 			
-			temp=0.0001;
+			MessageBox(L"0不能做除数");
 		
 		}
 		else
