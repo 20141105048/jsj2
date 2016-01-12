@@ -54,7 +54,7 @@ CjsjDlg::CjsjDlg(CWnd* pParent /*=NULL*/)
 	, m_str(_T(""))
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
-	c=174;c1=168;c3=360;c4=354;c5=180;c6=174;
+	c=174;c1=168;c3=1820;c4=1819.9;c5=180;c6=174;
 }
 
 void CjsjDlg::DoDataExchange(CDataExchange* pDX)
@@ -525,8 +525,8 @@ void CjsjDlg::OnBnClickedsj()
 	newpen2.CreatePen(PS_SOLID,2,RGB(255,255,255));
 	pDC3=GetDC();
 	oldpen2=pDC3->SelectObject(&newpen2);
-    x3=ox+r*sin(c3*3.1415926/360);
-	y3=oy+r*cos(c3*3.1415926/360);
+    x3=ox+r*sin(c3*3.1415926/1800);
+	y3=oy+r*cos(c3*3.1415926/1800);
 	pDC3->MoveTo(ox,oy);
 	pDC3->LineTo(x3,y3);
 	c3=c3-0.1;
@@ -535,8 +535,8 @@ void CjsjDlg::OnBnClickedsj()
 	newpen3.CreatePen(PS_SOLID,2,RGB(0,100,255));
 	pDC4=GetDC();
 	oldpen3=pDC4->SelectObject(&newpen3);
-    x4=ox+r*sin(c4*3.1415926/360);
-	y4=oy+r*cos(c4*3.1415926/360);
+    x4=ox+r*sin(c4*3.1415926/1800);
+	y4=oy+r*cos(c4*3.1415926/1800);
 	pDC4->MoveTo(ox,oy);
 	pDC4->LineTo(x4,y4);
 	c4=c4-0.1;
@@ -553,8 +553,8 @@ void CjsjDlg::OnBnClickedsj()
 	newpen5.CreatePen(PS_SOLID,2,RGB(255,255,255));
 	pDC7=GetDC();
 	oldpen5=pDC7->SelectObject(&newpen5);
-    x5=ox+k*sin(c3*3.1415926/43200);
-	y5=oy+k*cos(c3*3.1415926/43200);
+    x5=ox+k*sin(c3*3.1415926/216000);
+	y5=oy+k*cos(c3*3.1415926/216000);
 	pDC7->MoveTo(ox,oy);
 	pDC7->LineTo(x5,y5);
 	c5=c5-0.1;
@@ -563,8 +563,8 @@ void CjsjDlg::OnBnClickedsj()
 	newpen6.CreatePen(PS_SOLID,2,RGB(255,0,255));
 	pDC8=GetDC();
 	oldpen6=pDC8->SelectObject(&newpen6);
-    x6=ox+k*sin(c4*3.1415926/43200);
-	y6=oy+k*cos(c4*3.1415926/43200);
+    x6=ox+k*sin(c4*3.1415926/216000);
+	y6=oy+k*cos(c4*3.1415926/216000);
 	pDC8->MoveTo(ox,oy);
 	pDC8->LineTo(x6,y6);
 	c6=c6-0.1;
