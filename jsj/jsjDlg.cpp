@@ -469,7 +469,6 @@ void CjsjDlg::OnBnClickedsj()
 	oldpen1=pDC9->SelectObject(&pen);
 
 	pDC9->Ellipse(100,-100,-100,100);
-	pDC9->Ellipse(-1,1,1,-1);
 	
 	for(int i=0;i<12;i++)
 	{
@@ -519,7 +518,7 @@ void CjsjDlg::OnBnClickedsj()
 	
 	
 
-		int r=60,x3,x4,y3,y4,ox=380,oy=240;
+	int r=60,x3,x4,y3,y4,ox=380,oy=240;
 	CDC *pDC3;
 	CPen newpen2,*oldpen2;
 	newpen2.CreatePen(PS_SOLID,2,RGB(255,255,255));
@@ -553,8 +552,8 @@ void CjsjDlg::OnBnClickedsj()
 	newpen5.CreatePen(PS_SOLID,2,RGB(255,255,255));
 	pDC7=GetDC();
 	oldpen5=pDC7->SelectObject(&newpen5);
-    x5=ox+k*sin(c3*3.1415926/36000);
-	y5=oy+k*cos(c3*3.1415926/36000);
+    x5=ox+k*sin(c3*3.1415926/43200);
+	y5=oy+k*cos(c3*3.1415926/43200);
 	pDC7->MoveTo(ox,oy);
 	pDC7->LineTo(x5,y5);
 	c5=c5-0.1;
@@ -563,8 +562,8 @@ void CjsjDlg::OnBnClickedsj()
 	newpen6.CreatePen(PS_SOLID,2,RGB(255,0,255));
 	pDC8=GetDC();
 	oldpen6=pDC8->SelectObject(&newpen6);
-    x6=ox+k*sin(c4*3.1415926/36000);
-	y6=oy+k*cos(c4*3.1415926/36000);
+    x6=ox+k*sin(c4*3.1415926/43200);
+	y6=oy+k*cos(c4*3.1415926/43200);
 	pDC8->MoveTo(ox,oy);
 	pDC8->LineTo(x6,y6);
 	c6=c6-0.1;
