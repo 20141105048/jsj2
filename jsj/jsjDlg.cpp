@@ -215,7 +215,6 @@ void CjsjDlg::OnBnClicked0()
 	// TODO: 在此添加控件通知处理程序代码
 	UpdateData(true);
 	m_str=m_str+L"0";
-	
 	UpdateData(false);
 }
 
@@ -226,7 +225,6 @@ void CjsjDlg::OnBnClickeddian()
 {
 	// TODO: 在此添加控件通知处理程序代码
 	UpdateData(true);
-
 	if(m_str.Find(L".")==-1)
 		m_str=m_str+L".";
 	UpdateData(false);
@@ -266,7 +264,7 @@ void CjsjDlg::OnBnClickedjs()
 	if(flag==4)
 	{
 		double a;
-			a=_ttof(m_str);
+		a=_ttof(m_str);
 		if(a<=0.00000000000000000000000001)
 		{
 			
@@ -375,6 +373,7 @@ void CjsjDlg::OnBnClickedcheng()
 
 void CjsjDlg::OnBnClickedpingfang()
 {
+
 	// TODO: 在此添加控件通知处理程序代码
 	
 	UpdateData(true);
@@ -392,6 +391,7 @@ void CjsjDlg::OnBnClickedpingfang()
 
 void CjsjDlg::OnBnClickedgenhao()
 {
+
 	// TODO: 在此添加控件通知处理程序代码
 	UpdateData(true);
 	temp=_ttof(m_str);
@@ -458,67 +458,52 @@ void CjsjDlg::OnBnClickedback()
 
 
 void CjsjDlg::OnBnClickedsj()
-	{
-
-		SetTimer(1,1000,NULL);
-		
+{
+	SetTimer(1,1000,NULL);
 	CDC *pDC9;
 	pDC9=GetDC();
-	pDC9->SetWindowOrg(0-380,0-240);
+	pDC9->SetWindowOrg(-380,-240);
 	CPen *oldpen1;
 	CPen pen(PS_SOLID,3,RGB(0,100,255));
 	oldpen1=pDC9->SelectObject(&pen);
-
 	pDC9->Ellipse(100,-100,-100,100);
-	
 	for(int i=0;i<12;i++)
 	{
 		double l=90,ag=i*3.1415926/6;
 		double a=l*sin(ag)+1,b=-l*cos(ag)+1,c=l*sin(ag)-1,d=-l*cos(ag)-1;
 		pDC9->Ellipse(a,b,c,d);
-		
-		
-
 	}
-	
-	
-	
-    }
+}
 
-	// TODO: 在此添加控件通知处理程序代码
-	void CjsjDlg::OnTimer(UINT_PTR nIDEvent)
+
+
+void CjsjDlg::OnTimer(UINT_PTR nIDEvent)
 {
-	// TODO: 在此添加消息处理程序代码和/或调用默认值
-	
-	
 	if(nIDEvent==1)
 	{
-	int r=80,x,x1,y,y1,ox=380,oy=240;
-	CDC *pDC;
-	CPen newpen,*oldpen;
-	newpen.CreatePen(PS_SOLID,1,RGB(255,255,255));
-	pDC=GetDC();
-	oldpen=pDC->SelectObject(&newpen);
-    x=ox+r*sin(c*3.1415926/180);
-	y=oy+r*cos(c*3.1415926/180);
-	pDC->MoveTo(ox,oy);
-	pDC->LineTo(x,y);
-	c=c-6;
-	CDC *pDC1;
-	CPen newpen1,*oldpen1;
-	newpen1.CreatePen(PS_SOLID,1,RGB(0,0,0));
-	pDC1=GetDC();
-	oldpen1=pDC1->SelectObject(&newpen1);
-    x1=ox+r*sin(c1*3.1415926/180);
-	y1=oy+r*cos(c1*3.1415926/180);
-	pDC1->MoveTo(ox,oy);
-	pDC1->LineTo(x1,y1);
-	c1=c1-6;
+		int r=80,x,x1,y,y1,ox=380,oy=240;
+	    CDC *pDC;
+	    CPen newpen,*oldpen;
+	    newpen.CreatePen(PS_SOLID,1,RGB(255,255,255));
+	    pDC=GetDC();
+	    oldpen=pDC->SelectObject(&newpen);
+        x=ox+r*sin(c*3.1415926/180);
+	    y=oy+r*cos(c*3.1415926/180);
+	    pDC->MoveTo(ox,oy);
+	    pDC->LineTo(x,y);
+	    c=c-6;
+	    CDC *pDC1;
+	    CPen newpen1,*oldpen1;
+	    newpen1.CreatePen(PS_SOLID,1,RGB(0,0,0));
+	    pDC1=GetDC();
+	    oldpen1=pDC1->SelectObject(&newpen1);
+        x1=ox+r*sin(c1*3.1415926/180);
+	    y1=oy+r*cos(c1*3.1415926/180);
+	    pDC1->MoveTo(ox,oy);
+	    pDC1->LineTo(x1,y1);
+	    c1=c1-6;
 	
 	}
-	
-	
-
 	int r=60,x3,x4,y3,y4,ox=380,oy=240;
 	CDC *pDC3;
 	CPen newpen2,*oldpen2;
@@ -541,13 +526,8 @@ void CjsjDlg::OnBnClickedsj()
 	pDC4->LineTo(x4,y4);
 	c4=c4-0.1;
 
-	
-	
-	
 
-	
-	
-		int k=40,x5,x6,y5,y6;
+	int k=40,x5,x6,y5,y6;
 	CDC *pDC7;
 	CPen newpen5,*oldpen5;
 	newpen5.CreatePen(PS_SOLID,2,RGB(255,255,255));
@@ -568,13 +548,6 @@ void CjsjDlg::OnBnClickedsj()
 	pDC8->MoveTo(ox,oy);
 	pDC8->LineTo(x6,y6);
 	c6=c6-0.1;
-
-	
-	
-	
-	
-	
-
 
 	CDialogEx::OnTimer(nIDEvent);
 }
